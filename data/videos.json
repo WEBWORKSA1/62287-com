@@ -1,0 +1,10 @@
+{
+ "_how": "Add YouTube video IDs (the part after v=) to auto-embed them at the top of the Video Hub.",
+ "videos": [
+  {
+   "id": "",
+   "title": "Example: Red Bud walking tour",
+   "note": "Creator name"
+  }
+ ]
+}
