@@ -1,10 +1,10 @@
-/* 62278.com — Red Bud & Metro-East Small-Town Hub */
+/* 62287.com — OCCUR: plan & discover events */
 :root{
-  --bud:#c2185b; --bud-2:#e8508a; --bud-soft:#fde7ef;
+  --bud:#d9480f; --bud-2:#f76707; --bud-soft:#fff0e6;
   --leaf:#2e7d32; --leaf-soft:#e6f4e7;
   --ink:#141a2b; --ink-2:#3b4357; --muted:#6b7389;
   --bg:#fbfaf8; --card:#ffffff; --line:#e9e5e0;
-  --navy:#16213e; --gold:#f2a93b;
+  --navy:#1b1f3b; --gold:#7048e8;
   --radius:16px; --shadow:0 10px 30px -12px rgba(20,26,43,.18);
   --max:1180px;
   --font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -13,7 +13,7 @@
 [data-theme="dark"]{
   --ink:#eef0f6; --ink-2:#c9cede; --muted:#9aa2b8;
   --bg:#0e1220; --card:#161b2e; --line:#262d45;
-  --bud-soft:#3a1426; --leaf-soft:#173322;
+  --bud-soft:#3a1d10; --leaf-soft:#173322;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -119,7 +119,7 @@ input[type=range]{padding:0;accent-color:var(--bud)}
 .hp{position:absolute;left:-5000px}
 
 /* lead wizard */
-.wizard{background:var(--card);border:2px solid var(--bud);border-radius:24px;padding:30px;box-shadow:0 20px 50px -20px rgba(194,24,91,.35)}
+.wizard{background:var(--card);border:2px solid var(--bud);border-radius:24px;padding:30px;box-shadow:0 20px 50px -20px rgba(217,72,15,.35)}
 .steps{display:flex;gap:6px;margin-bottom:18px}
 .steps i{flex:1;height:6px;border-radius:6px;background:var(--line)}
 .steps i.on{background:var(--bud)}

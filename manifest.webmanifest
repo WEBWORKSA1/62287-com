@@ -1,10 +1,10 @@
 {
- "name": "62278.com",
- "short_name": "62278",
+ "name": "62287.com \u2014 OCCUR",
+ "short_name": "OCCUR",
  "start_url": "./index.html",
  "display": "standalone",
  "background_color": "#fbfaf8",
- "theme_color": "#c2185b",
+ "theme_color": "#d9480f",
  "icons": [
   {
    "src": "assets/img/favicon.svg",

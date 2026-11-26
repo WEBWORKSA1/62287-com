@@ -1,15 +1,14 @@
-# 62278 — Research & Concept
+# 62287 — Research & Concept
 
-## What "62278" means in the real world
-- **ZIP Code of Red Bud, Illinois** (Randolph County), ~36 mi SE of St. Louis. ZCTA population 6,425; median household income $85,017; median home value $181,500 (ACS 2023). City population 3,804 (2020 census).
-- Housing: Redfin median sale ~$200K (Nov 2025, +26% YoY), ~43–46 days on market, "very competitive".
-- Economy: agriculture, manufacturing, local services. Red Bud Business Park (50.58 acres, 1–4 acre lots, utilities + fiber), Foreign Trade Zone 31, Kaskaskia Regional Port District Dock #2 (~5 min), IL-3/154/159, SWIC Red Bud campus, Red Bud Regional Hospital.
-- Other uses: obscure industrial part numbers (e.g. a discontinued "ST62278 plate"). No meaningful AI/finance/cultural significance; no dominant trademark.
+## What "62287" means
+- **Not an active U.S. ZIP Code.** Searches show no town, census tract or listings for 62287. The neighbouring ZIPs are real: 62286 (Sparta, IL) and 62288 (Steeleville, IL). Because of that, a place-based site would be unsupportable.
+- **Phone keypad word:** 6-2-2-8-7 = **O-C-C-U-R** (O=6, C=2, C=2, U=8, R=7). This is the cleanest, most brandable hook.
+- No meaningful product, AI, finance or cultural use; no dominant trademark found on "62287".
 
 ## Concept (chosen)
-**62278.com — independent "Live, Move & Do Business" hub for ZIP 62278 and the Metro-East countryside.**
-Revenue stack: AdSense on high-CPC verticals (mortgage, insurance, real estate, B2B site selection) + lead generation (agents, lenders, insurers, contractors, economic development) + directory featured listings + sponsorships + donations.
+**62287.com — OCCUR: plan, budget and book events** (weddings, birthdays, corporate events, fundraisers).
+Revenue: AdSense (wedding, venue and catering topics pay well per click) + vendor lead generation (venues, caterers, photographers, DJs, planners, rentals) + featured vendor listings + sponsorships + donations.
 
 ## Benchmark sites (feature patterns adopted)
-Niche, AreaVibes, BestPlaces, Livability, City-Data, Zillow, Redfin, Realtor.com, Trulia, NerdWallet (calculators), Bankrate, Patch, Nextdoor, Yelp, Angi, Thumbtack, HomeAdvisor, Eventbrite, Downstate Illinois visitors guide, Intersect Illinois, City of Red Bud economic development, Great River Road, Population Review, Data USA, MyTownView.
-Adopted: snapshot stat cards with sources, livability/fit quiz, cost-of-living & affordability calculators, mortgage calc, multi-step quote wizard, category directory with filters, event timeline + submission, long-form guides with FAQ schema, featured-listing tiers, sponsor packages, newsletter capture, sticky mobile CTA, dark mode, site search.
+The Knot, Zola, WeddingWire, Brides, Junebug Weddings, Peerspace, Tagvenue, Eventbrite, Cvent, Splash, Social Tables, Thumbtack, Bark, GigSalad, The Bash, Partyslate, Evite, Paperless Post, Minted, Joy, Honeybook, Aisle Planner, Meetings Today, Bizzabo, Givebutter.
+Adopted: budget planner with category split, per-guest maths, guest/catering estimators, seating & space calculator, countdown checklist with booking deadlines, multi-step quote wizard, vendor categories with filters, featured-listing tiers, sponsorship packages, seasonal planning calendar, long-form guides, FAQ schema, newsletter capture, sticky mobile CTA, dark mode, site search.

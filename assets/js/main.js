@@ -1,4 +1,4 @@
-/* 62278.com core script */
+/* 62287.com (OCCUR) core script */
 (function () {
   "use strict";
   var $ = function (s, c) { return (c || document).querySelector(s); };
@@ -45,7 +45,7 @@
       if (f.querySelector('input[name="' + n + '"]')) return;
       var i = document.createElement("input"); i.type = "hidden"; i.name = n; i.value = v; f.appendChild(i);
     };
-    add("_subject", "62278.com — " + (f.getAttribute("data-fs") || "Form submission"));
+    add("_subject", "62287.com — " + (f.getAttribute("data-fs") || "Form submission"));
     add("_template", "table");
     add("_captcha", "false");
     add("_next", absUrl("thank-you.html?f=" + encodeURIComponent(f.getAttribute("data-fs") || "form")));
@@ -97,65 +97,54 @@
   function money(n) { return "$" + Math.round(n).toLocaleString("en-US"); }
   function bind(ids, fn) { ids.forEach(function (id) { var el = document.getElementById(id); if (el) el.addEventListener("input", fn); }); fn(); }
 
-  /* mortgage / affordability */
-  if ($("#mtg")) bind(["m_price","m_down","m_rate","m_years","m_tax","m_ins"], function () {
-    var P = num("m_price") - num("m_down"), r = num("m_rate") / 100 / 12, n = num("m_years") * 12;
-    var pi = r ? P * r / (1 - Math.pow(1 + r, -n)) : P / n;
-    var tax = num("m_price") * num("m_tax") / 100 / 12, ins = num("m_ins") / 12;
-    $("#m_out").innerHTML = '<b class="big">' + money(pi + tax + ins) + '/mo</b>Principal &amp; interest ' + money(pi) + ' · Property tax ' + money(tax) + ' · Insurance ' + money(ins) +
-      '<br><span class="src">Loan amount ' + money(P) + '. Estimate only — not a loan offer.</span>';
+  /* ---------- event budget split ---------- */
+  var SPLITS = {
+    wedding: [["Venue & rentals",.28],["Catering & bar",.30],["Photo & video",.11],["Music / DJ / band",.07],["Flowers & décor",.09],["Attire & beauty",.06],["Stationery & favours",.03],["Planner / coordinator",.03],["Contingency",.03]],
+    corporate: [["Venue & AV",.32],["Catering & bar",.30],["Speakers / entertainment",.12],["Marketing & signage",.08],["Staffing & security",.06],["Travel & transport",.07],["Contingency",.05]],
+    birthday: [["Venue / space",.25],["Food & cake",.35],["Entertainment",.15],["Décor & balloons",.12],["Invites & favours",.06],["Contingency",.07]],
+    fundraiser: [["Venue",.25],["Catering",.30],["Auction / raffle prizes",.10],["AV & entertainment",.12],["Marketing",.10],["Staffing",.06],["Contingency",.07]]
+  };
+  if ($("#budget")) bind(["b_total","b_type","b_guests"], function () {
+    var t = num("b_total"), g = Math.max(num("b_guests"), 1), rows = SPLITS[$("#b_type").value] || SPLITS.wedding;
+    $("#b_out").innerHTML = '<b class="big">' + money(t / g) + ' per guest</b><table>' + rows.map(function (r) {
+      return "<tr><td>" + r[0] + "</td><td>" + Math.round(r[1] * 100) + "%</td><td><b>" + money(t * r[1]) + "</b></td></tr>"; }).join("") +
+      '</table><span class="src">Rule-of-thumb split for planning. Shift money toward what your guests will remember most.</span>';
   });
-  if ($("#afford")) bind(["a_inc","a_debt","a_down","a_rate"], function () {
-    var gross = num("a_inc") / 12, maxPay = Math.max(0, Math.min(gross * .28, gross * .36 - num("a_debt")));
-    var r = num("a_rate") / 100 / 12, n = 360, housing = maxPay * .8; /* ~20% to tax+insurance */
-    var loan = r ? housing * (1 - Math.pow(1 + r, -n)) / r : housing * n;
-    var price = loan + num("a_down"), median = 200000;
-    var pct = Math.round(price / median * 100);
-    $("#a_out").innerHTML = '<b class="big">' + money(price) + '</b>Estimated max home price (28/36 rule, 30-yr fixed). That is <b>' + pct + '%</b> of the recent 62278 median sale price (~$200K, Redfin, Nov 2025).';
+  /* ---------- catering & bar ---------- */
+  if ($("#cater")) bind(["k_guests","k_food","k_drink","k_hours","k_svc"], function () {
+    var g = num("k_guests"), food = g * num("k_food"), drinks = g * num("k_drink"), sub = food + drinks, svc = sub * num("k_svc") / 100;
+    var servings = Math.ceil(g * (num("k_hours") + 1)), bottles = Math.ceil(servings / 5);
+    $("#k_out").innerHTML = '<b class="big">' + money(sub + svc) + '</b>Food ' + money(food) + ' · Bar ' + money(drinks) + ' · Service &amp; gratuity ' + money(svc) +
+      '<br>Plan ~<b>' + servings.toLocaleString() + ' drinks</b> (1 per guest per hour + 1) — about <b>' + bottles + '</b> bottles of wine-equivalent.';
   });
-  /* commute */
-  if ($("#commute")) bind(["c_miles","c_mpg","c_gas","c_days"], function () {
-    var gal = num("c_miles") * 2 / Math.max(num("c_mpg"), 1), day = gal * num("c_gas");
-    var yr = day * num("c_days") * 48, irs = num("c_miles") * 2 * num("c_days") * 48 * 0.70;
-    $("#c_out").innerHTML = '<b class="big">' + money(yr) + '/yr fuel</b>' + money(day) + ' per round trip · ' + Math.round(num("c_miles") * 2 * num("c_days") * 48).toLocaleString() + ' miles/yr<br><span class="src">All-in vehicle cost at ~$0.70/mi (IRS-style rate): ' + money(irs) + '/yr.</span>';
+  /* ---------- seating & space ---------- */
+  if ($("#seat")) bind(["s_guests","s_per","s_style"], function () {
+    var g = num("s_guests"), tables = Math.ceil(g / Math.max(num("s_per"), 1)), sq = g * num("s_style");
+    $("#s_out").innerHTML = '<b class="big">' + tables + ' tables</b>Space needed: about <b>' + Math.round(sq).toLocaleString() + ' sq ft</b> (' + Math.round(sq * 0.0929).toLocaleString() + ' m²) before stage, bar and dance floor.';
   });
-  /* cost of living swap */
-  if ($("#col")) bind(["col_sal","col_from"], function () {
-    var from = num("col_from"), to = 88; /* local index estimate; US avg = 100 */
-    var eq = num("col_sal") * to / from, save = num("col_sal") - eq;
-    $("#col_out").innerHTML = '<b class="big">' + money(eq) + '</b>salary in 62278 buys roughly what ' + money(num("col_sal")) + ' buys in your current area' +
-      (save > 0 ? ' — about <b>' + money(save) + '/yr</b> of breathing room.' : '.') + '<br><span class="src">Uses an estimated local index of 88 (US = 100). Indices vary by source; treat as directional.</span>';
-  });
-  /* logistics reach */
-  if ($("#reach")) {
-    var dests = [["Downtown St. Louis, MO",40],["St. Louis Lambert Airport",55],["Carbondale, IL",65],["Springfield, IL",135],["Indianapolis, IN",280],["Memphis, TN",265],["Kansas City, MO",290],["Nashville, TN",300],["Louisville, KY",290],["Chicago, IL",320],["Dallas, TX",640],["Atlanta, GA",540]];
-    var tb = $("#reach tbody");
+  /* ---------- countdown & checklist ---------- */
+  if ($("#countdown")) {
+    var dIn = $("#t_date");
+    if (dIn && !dIn.value) { var d0 = new Date(); d0.setMonth(d0.getMonth() + 6); dIn.value = d0.toISOString().slice(0, 10); }
+    var steps = [[365,"Set budget, guest estimate and date window"],[300,"Book venue (and planner, if using one)"],[240,"Book photographer, caterer and music"],[180,"Send save-the-dates; book florist & rentals"],[120,"Finalise menu tasting & décor plan"],[60,"Send invitations; order cake & signage"],[30,"Confirm vendors, timeline and seating"],[14,"Final headcount to caterer"],[7,"Share run-of-show with every vendor"],[1,"Prep payments, tips and emergency kit"]];
     var draw = function () {
-      var mph = num("r_mph"), hrs = num("r_hrs");
-      tb.innerHTML = dests.map(function (d) {
-        var h = d[1] / mph, days = Math.max(1, Math.ceil(h / hrs));
-        return "<tr><td>" + d[0] + "</td><td>~" + d[1] + " mi</td><td>" + h.toFixed(1) + " h</td><td>" + (h <= hrs ? "Same day" : days + " day" + (days > 1 ? "s" : "")) + "</td></tr>";
-      }).join("");
+      var ev = new Date(dIn.value + "T12:00:00"), now = new Date(), left = Math.ceil((ev - now) / 864e5);
+      if (isNaN(left)) return;
+      $("#t_out").innerHTML = '<b class="big">' + (left >= 0 ? left + " days to go" : "Event date has passed") + '</b><table>' + steps.map(function (s) {
+        var due = new Date(ev - s[0] * 864e5), late = due < now;
+        return "<tr><td>" + due.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"}) + "</td><td>" + (late ? "⚠️ " : "✅ ") + s[1] + "</td></tr>"; }).join("") + "</table>";
     };
-    bind(["r_mph","r_hrs"], draw);
+    dIn.addEventListener("input", draw); draw();
   }
-  /* startup cost */
-  if ($("#startup")) bind(["s_rent","s_build","s_equip","s_inv","s_staff","s_mkt","s_margin","s_ticket"], function () {
-    var once = num("s_build") + num("s_equip") + num("s_inv"), monthly = num("s_rent") + num("s_staff") + num("s_mkt");
-    var runway = monthly * 6, need = once + runway, perSale = num("s_ticket") * num("s_margin") / 100;
-    var be = perSale ? Math.ceil(monthly / perSale) : 0;
-    $("#s_out").innerHTML = '<b class="big">' + money(need) + '</b>Launch capital (one-time ' + money(once) + ' + 6-month runway ' + money(runway) + ')<br>Break-even: <b>' + be.toLocaleString() + ' sales/month</b> (~' + Math.ceil(be / 26) + '/day).';
-  });
-  /* fit quiz */
+  /* ---------- event style quiz ---------- */
   var quiz = $("#fitquiz");
   if (quiz) quiz.addEventListener("change", function () {
-    var s = 0, n = 0;
-    $$("select", quiz).forEach(function (x) { if (x.value) { s += +x.value; n++; } });
+    var v = $$("select", quiz).map(function (x) { return x.value; });
     var out = $("#fit_out");
-    if (n < $$("select", quiz).length) { out.innerHTML = "Answer all " + $$("select", quiz).length + " questions to see your fit score."; return; }
-    var pct = Math.round(s / (n * 3) * 100);
-    var msg = pct >= 75 ? "Strong fit. You value space, affordability and community — 62278 delivers." : pct >= 50 ? "Good fit with trade-offs. Visit on a weekday and a festival weekend before deciding." : "Probably not your match — and that's useful to know before you move.";
-    out.innerHTML = '<b class="big">' + pct + '% fit</b>' + msg + ' <a href="' + ROOT + 'get-started.html?intent=relocate">Get a free relocation plan →</a>';
+    if (v.indexOf("") > -1) { out.innerHTML = "Answer all " + v.length + " questions to see your event style."; return; }
+    var s = v.reduce(function (a, b) { return a + (+b); }, 0);
+    var style = s >= 9 ? ["Grand celebration","Full-service venue, live band, planner. Book 10–12 months out."] : s >= 6 ? ["Stylish & social","Restaurant buyout or loft, DJ, food stations. Book 4–6 months out."] : ["Intimate & personal","Private dining room or backyard, curated menu, one great photographer. 6–10 weeks is enough."];
+    out.innerHTML = '<b class="big">' + style[0] + '</b>' + style[1] + ' <a href="' + ROOT + 'get-started.html">Get matched with vendors →</a>';
   });
 
   /* ---------- directory filter ---------- */

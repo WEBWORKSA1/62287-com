@@ -1,122 +1,110 @@
 [
  {
-  "u": "index.html",
-  "t": "62278.com",
-  "d": "Independent guide to ZIP 62278 \u2014 Red Bud, IL: homes, cost of living, business sites, local directory, events, free calculators and free local matching.",
-  "k": "home red bud 62278 zip"
- },
- {
-  "u": "live.html",
-  "t": "Living in Red Bud, IL 62278 \u2014 Cost of Living, Housing & Relocation Guide",
-  "d": "Honest relocation guide to ZIP 62278: home prices, income, healthcare, schools, commute to St. Louis, plus affordability, cost-of-living and commute calculators.",
-  "k": "relocate move housing cost of living commute schools"
- },
- {
-  "u": "business.html",
-  "t": "Business & Site Selection in Red Bud, IL 62278 \u2014 Business Park, FTZ 31, Logistics",
-  "d": "Site-selection guide for ZIP 62278: Red Bud Business Park lots, Foreign Trade Zone 31, river port and highway access, incentives, logistics and break-even calculators.",
-  "k": "business park industrial site selection ftz incentives logistics"
+  "u": "plan.html",
+  "t": "Free Event Planning Tools \u2014 Budget, Catering, Seating & Checklist",
+  "d": "Free event planning calculators: budget split by event type, catering and bar estimator, seating and space planner, and a countdown checklist with booking dates.",
+  "k": "plan budget calculator catering bar seating tables checklist timeline countdown"
  },
  {
   "u": "directory.html",
-  "t": "62278 Local Business Directory \u2014 Red Bud, IL Contractors, Health, Food & Services",
-  "d": "Browse local businesses in the 62278 area \u2014 home services, real estate, health, food, agriculture and professional services \u2014 or list your business free.",
-  "k": "directory contractors plumbers restaurants listing"
+  "t": "Event Vendor Directory \u2014 Venues, Caterers, Photographers, DJs & More",
+  "d": "Browse event vendors by category \u2014 venues, catering, photo and video, music, d\u00e9cor, planners and rentals \u2014 or list your event business free.",
+  "k": "vendors directory venue caterer photographer dj florist rentals planner listing"
  },
  {
   "u": "events.html",
-  "t": "Red Bud, IL Events Calendar \u2014 Festivals & Traditions in 62278",
-  "d": "Annual events in Red Bud, Illinois (62278): Chocolate Walk, Firemen's Picnic, Brew-B-Que, Christmas Walk, lighted parade and more. Submit your event free.",
-  "k": "events festivals christmas walk picnic calendar"
+  "t": "Event Ideas & Seasonal Planning Calendar",
+  "d": "Month-by-month event calendar and ideas for weddings, birthdays, corporate events and fundraisers \u2014 plus when to book each vendor.",
+  "k": "ideas calendar seasonal wedding birthday corporate fundraiser holiday party"
  },
  {
   "u": "videos.html",
-  "t": "62278 Video Hub \u2014 Relocation, Real Estate & Small Business Videos",
-  "d": "Curated videos on small-town relocation, home buying, mortgages, site selection and starting a Main Street business near Red Bud, Illinois.",
+  "t": "Event Planning Video Hub",
+  "d": "Curated videos on wedding timelines, event budgets, venues, catering, d\u00e9cor, corporate events and fundraising galas.",
   "k": "videos youtube watch"
  },
  {
-  "u": "tools.html",
-  "t": "Free Mortgage, Affordability, Commute & Cost-of-Living Calculators",
-  "d": "Free calculators for movers and buyers in the 62278 area: mortgage payment with Illinois property tax, affordability vs local median price, commute cost and cost-of-living swap.",
-  "k": "calculator mortgage affordability commute cost of living tools"
- },
- {
   "u": "get-started.html",
-  "t": "Get Matched Free \u2014 Local Agents, Lenders, Contractors & Business Sites in 62278",
-  "d": "Free matching for the 62278 area: real-estate agents, mortgage lenders, insurance, contractors and business-site contacts. One short form, reply in one business day.",
-  "k": "lead quote agent lender contractor insurance match"
+  "t": "Get Free Event Vendor Quotes \u2014 Venues, Catering, Photo, DJ & More",
+  "d": "Free quote matching for weddings, parties, corporate events and fundraisers: up to 3 vetted vendors that fit your date, guest count and budget.",
+  "k": "quote quotes lead vendor venue catering photographer dj planner"
  },
  {
   "u": "advertise.html",
-  "t": "Advertise & Sponsor on 62278.com \u2014 Reach Red Bud & Metro-East Customers",
-  "d": "Featured listings, category and event sponsorships, lead partnerships and custom packages to reach movers, buyers and business owners in the 62278 area.",
-  "k": "advertise sponsor partner leads"
+  "t": "Advertise & Sponsor on 62287.com \u2014 Reach Event Planners",
+  "d": "Featured vendor listings, category and tool sponsorships, lead partnerships and custom packages to reach people planning events.",
+  "k": "advertise sponsor partner leads vendors"
  },
  {
   "u": "support.html",
-  "t": "Support 62278.com \u2014 Donate, Contests & Prizes, Careers",
-  "d": "Support the independent 62278 guide: donate to operations and promotion, enter photo and business-pitch contests, sponsor prizes, or join our team.",
+  "t": "Support 62287.com \u2014 Donate, Contests & Prizes, Careers",
+  "d": "Support free event-planning tools: donate, enter photo and budget-event contests, sponsor prizes, or join our team.",
   "k": "donate support contest prize careers jobs hiring volunteer"
  },
  {
-  "u": "guides/moving-from-st-louis.html",
-  "t": "Moving from St. Louis to a Small Illinois Town: A Numbers-First Checklist",
-  "d": "Thinking about trading a St. Louis address for small-town Illinois? Here's the checklist for taxes, commute, housing, schools and lifestyle.",
-  "k": "relocation"
+  "u": "guides/event-budget-guide.html",
+  "t": "How to Build an Event Budget That Actually Holds",
+  "d": "A step-by-step method for setting, splitting and protecting an event budget \u2014 weddings, parties and corporate events.",
+  "k": "budget"
  },
  {
-  "u": "guides/small-town-site-selection.html",
-  "t": "How to Choose a Small-Town Industrial Site: 12 Questions to Ask First",
-  "d": "A practical checklist for evaluating small-town industrial and commercial lots: utilities, zoning, logistics, workforce, incentives and risk.",
-  "k": "business"
+  "u": "guides/choosing-a-venue.html",
+  "t": "Choosing an Event Venue: 15 Questions to Ask Before You Sign",
+  "d": "The questions that reveal a venue's true cost and fit \u2014 capacity, minimums, inclusions, rules, timing and backup plans.",
+  "k": "venues"
  },
  {
-  "u": "guides/buying-a-home-small-market.html",
-  "t": "Buying a Home in a Competitive Small Market: A Practical Playbook",
-  "d": "How to win a house in a small, fast-rising market without overpaying: pre-approval, comps, offers, inspections and appraisal gaps.",
-  "k": "homes"
+  "u": "guides/corporate-event-planning.html",
+  "t": "Planning a Corporate Event: From Objective to Run-of-Show",
+  "d": "A practical framework for offsites, conferences, launches and holiday parties \u2014 goals, budget, venue, agenda, AV and follow-up.",
+  "k": "corporate"
  },
  {
-  "u": "guides/main-street-business-launch.html",
-  "t": "Launching a Main Street Business in a Small Town: Capital, Break-Even and Marketing",
-  "d": "A realistic guide to opening a storefront in a town of about 4,000 people: start-up capital, break-even maths and local marketing that works.",
-  "k": "main street"
+  "u": "guides/fundraiser-gala-guide.html",
+  "t": "How to Plan a Fundraising Gala That Raises More Than It Costs",
+  "d": "Set a fundraising goal, control costs, secure sponsors and design the evening around giving moments.",
+  "k": "fundraisers"
  },
  {
   "u": "guides/index.html",
-  "t": "Guides \u2014 Relocation, Homes & Small Business in the 62278 Area",
-  "d": "In-depth guides on moving from St. Louis, buying in a competitive small market, choosing an industrial site and launching a Main Street business.",
+  "t": "Event Planning Guides \u2014 Budgets, Venues, Corporate & Fundraisers",
+  "d": "In-depth event planning guides: building a budget that holds, choosing a venue, planning corporate events and running a fundraising gala.",
   "k": "guides articles"
  },
  {
+  "u": "index.html",
+  "t": "62287.com \u2014 OCCUR: Free Event Planning Tools, Budgets & Vendor Quotes",
+  "d": "Plan weddings, birthdays, corporate events and fundraisers: free budget, catering, seating and timeline tools, a vendor directory and free vendor quotes.",
+  "k": "home occur 62287 event planning"
+ },
+ {
   "u": "about.html",
-  "t": "About 62278.com \u2014 Independent Guide to Red Bud, IL & ZIP 62278",
-  "d": "Who runs 62278.com, how we source our data and how the site is funded.",
-  "k": "about methodology data"
+  "t": "About 62287.com (OCCUR) \u2014 Independent Event Planning Hub",
+  "d": "Who runs 62287.com, why it's called OCCUR, how we make money and how we source our planning numbers.",
+  "k": "about occur"
  },
  {
   "u": "contact.html",
-  "t": "Contact 62278.com",
-  "d": "Contact the 62278.com team for questions, corrections, tips, advertising and partnerships.",
-  "k": "contact email message"
+  "t": "Contact 62287.com",
+  "d": "Contact the 62287.com team for questions, corrections, tips, advertising and partnerships.",
+  "k": "contact message"
  },
  {
   "u": "privacy.html",
   "t": "Privacy Policy",
-  "d": "How 62278.com collects, uses and protects your information, including cookies, Google AdSense and form submissions.",
-  "k": "privacy cookies adsense gdpr ccpa"
+  "d": "How 62287.com collects, uses and protects your information, including cookies, Google AdSense and form submissions.",
+  "k": "privacy cookies adsense"
  },
  {
   "u": "terms.html",
   "t": "Terms of Use",
-  "d": "Terms governing use of 62278.com, including referrals, user submissions, contests and donations.",
+  "d": "Terms governing use of 62287.com, including vendor referrals, user submissions, contests and donations.",
   "k": "terms legal"
  },
  {
   "u": "disclosure.html",
   "t": "Trademark & Copyright Disclosure",
-  "d": "62278.com trademark and copyright disclosure: no claim to the number 62278, no government affiliation, and how to report concerns.",
+  "d": "62287.com trademark and copyright disclosure: no claim to the number 62287 or the word occur, no affiliations, and how to report concerns.",
   "k": "trademark copyright disclosure dmca"
  }
 ]
